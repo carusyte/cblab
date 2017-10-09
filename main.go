@@ -25,6 +25,7 @@ func bulkMutation() {
 			if e != nil {
 				log.Printf("error at %d \n %+v", i, e)
 			}
+			mib = b.MutateIn("MAP", 0, 0)
 		}
 	}
 	log.Println("bulkMutation() complete")

@@ -20,7 +20,7 @@ func bulkMutation() {
 	mib := b.MutateIn("MAP", 0, 0)
 	for i := 0; i < 990; i++ {
 		mib.Remove(strconv.Itoa(i))
-		if (i != 0 && i%16 == 0) || i == 990-1 {
+		if (i != 0 && i%15 == 0) || i == 990-1 {
 			_, e := mib.Execute()
 			if e != nil {
 				log.Printf("error at %d \n %+v", i, e)
